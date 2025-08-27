@@ -19,7 +19,7 @@ export class Dashboard {
   constructor() {
     setTimeout(() => {
       this.isLoaded = true;
-    }, 5000);
+    }, 2000);
   }
 
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {
@@ -75,6 +75,21 @@ export class Dashboard {
       },
     ],
   };
+
+  public doughnutChartLabels: string[] = ['Monthly Targets'];
+  public doughnutChartData: ChartData<'doughnut'> = {
+    labels: this.doughnutChartLabels,
+    datasets: [
+      {
+        data: [75, 25],
+        borderColor: ['rgb(70, 95, 255)', '#FFF'],
+        backgroundColor: ['rgb(70, 95, 255)', '#FFF'],
+        rotation: -90,
+        circumference: 180,
+      },
+    ],
+  };
+  public doughnutChartType = 'doughnut' as const;
 
   // events
   public chartClicked({
