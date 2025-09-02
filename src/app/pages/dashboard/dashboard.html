@@ -41,14 +41,14 @@
                   >Customers</span
                 >
                 <h4
-                  class="mt-2 text-title-sm font-bold text-gray-800 dark:text-white/90"
+                  class="mt-2 text-2xl font-bold text-gray-800 dark:text-white/90"
                 >
                   3,782
                 </h4>
               </div>
 
               <span
-                class="flex items-center gap-1 rounded-full bg-success-50 py-0.5 pl-2 pr-2.5 text-sm font-medium text-success-600 dark:bg-success-500/15 dark:text-success-500"
+                class="flex items-center gap-1 rounded-full bg-green-50 py-0.5 pl-2 pr-2.5 text-sm font-medium text-green-600 dark:bg-green-500/15 dark:text-green-500"
               >
                 <svg
                   class="fill-current"
@@ -102,14 +102,14 @@
                   >Orders</span
                 >
                 <h4
-                  class="mt-2 text-title-sm font-bold text-gray-800 dark:text-white/90"
+                  class="mt-2 text-2xl font-bold text-gray-800 dark:text-white/90"
                 >
                   5,359
                 </h4>
               </div>
 
               <span
-                class="flex items-center gap-1 rounded-full bg-error-50 py-0.5 pl-2 pr-2.5 text-sm font-medium text-error-600 dark:bg-error-500/15 dark:text-error-500"
+                class="flex items-center gap-1 rounded-full bg-red-50 py-0.5 pl-2 pr-2.5 text-sm font-medium text-red-600 dark:bg-red-500/15 dark:text-red-500"
               >
                 <svg
                   class="fill-current"
@@ -148,7 +148,7 @@
             <div class="relative h-fit">
               <button
                 [ngClass]="openDropdownSales ? 'text-gray-700 dark:text-white' : 'text-gray-400 hover:text-gray-700 dark:hover:text-white'"
-                (click)="salesDropDown()"
+                (click)="onClickSalesMenu($event)"
               >
                 <!-- @click="openDropDown = !openDropDown" -->
                 <svg
@@ -170,7 +170,7 @@
               @if(openDropdownSales){
               <div
                 clickOutside
-                (clickOutside)="salesDropDown()"
+                (clickOutside)="onClickOutsideSalesMenu()"
                 class="absolute right-0 z-40 w-40 p-2 space-y-1 bg-white border border-gray-200 top-full rounded-2xl shadow-theme-lg dark:border-gray-800 dark:bg-gray-dark"
               >
                 <!-- @click.outside="openDropDown = false" -->
@@ -232,7 +232,7 @@
               <div class="relative h-fit">
                 <button
                   [ngClass]="openDropdownTarget ? 'text-gray-700 dark:text-white' : 'text-gray-400 hover:text-gray-700 dark:hover:text-white'"
-                  (click)="targetDropdown()"
+                  (click)="onMonthlyTarget($event)"
                 >
                   <!-- @click="openDropDown = !openDropDown" -->
                   <svg
@@ -255,7 +255,7 @@
                 <div
                   class="absolute right-0 top-full z-40 w-40 space-y-1 rounded-2xl border border-gray-200 bg-white p-2 shadow-theme-lg dark:border-gray-800 dark:bg-gray-dark"
                   clickOutside
-                  (clickOutside)="targetDropdown()"
+                  (clickOutside)="onOutsideMonthlyTarget()"
                 >
                   <!-- @click.outside="openDropDown = false" -->
                   <button
@@ -272,20 +272,20 @@
                 }
               </div>
             </div>
-            <div class="max-h-[195px]">
+            <div class="max-h-[240px]">
               <div id="chartTwo" class="h-full">
                 <canvas
-                  style="height: 195px; padding: 15px"
                   baseChart
                   [data]="doughnutChartData"
+                  [options]="doughnutChartOption"
                   [type]="doughnutChartType"
                 >
                 </canvas>
               </div>
-              <span
+              <!-- <span
                 class="absolute left-1/2 top-[85%] -translate-x-1/2 -translate-y-[85%] rounded-full bg-success-50 px-3 py-1 text-xs font-medium text-success-600 dark:bg-success-500/15 dark:text-success-500"
                 >+10%</span
-              >
+              > -->
             </div>
             <p
               class="mx-auto mt-1.5 w-full max-w-[380px] text-center text-sm text-gray-500 sm:text-base"

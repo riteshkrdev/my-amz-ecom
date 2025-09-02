@@ -22,6 +22,16 @@ export class Dashboard {
     }, 2000);
   }
 
+  public doughnutChartOption: ChartConfiguration<'doughnut'>['options'] = {
+    // We use these empty structures as placeholders for dynamic theming.
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    responsive: true,
+  };
+
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {
     // We use these empty structures as placeholders for dynamic theming.
     plugins: {
@@ -82,8 +92,8 @@ export class Dashboard {
     datasets: [
       {
         data: [75, 25],
-        borderColor: ['rgb(70, 95, 255)', '#FFF'],
-        backgroundColor: ['rgb(70, 95, 255)', '#FFF'],
+        borderColor: ['rgb(70, 95, 255)', '#e8ebef'],
+        backgroundColor: ['rgb(70, 95, 255)', '#e8ebef'],
         rotation: -90,
         circumference: 180,
       },
@@ -127,11 +137,20 @@ export class Dashboard {
     this.chart?.update();
   }
 
-  salesDropDown() {
+  onClickSalesMenu(event: Event) {
+    event.stopPropagation();
     this.openDropdownSales = !this.openDropdownSales;
   }
 
-  targetDropdown() {
+  onClickOutsideSalesMenu() {
+    this.openDropdownSales = !this.openDropdownSales;
+  }
+
+  onMonthlyTarget(event: Event) {
+    event.stopPropagation();
+    this.openDropdownTarget = !this.openDropdownTarget;
+  }
+  onOutsideMonthlyTarget() {
     this.openDropdownTarget = !this.openDropdownTarget;
   }
 }
