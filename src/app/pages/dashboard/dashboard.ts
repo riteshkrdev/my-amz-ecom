@@ -17,10 +17,10 @@ export class Dashboard {
   openDropdownTarget: boolean = false;
   isLoaded = false;
   constructor() {
-    this.isLoaded = true;
-    // setTimeout(() => {
-    //   this.isLoaded = true;
-    // }, 2000);
+    // this.isLoaded = true;
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 2000);
   }
 
   public doughnutChartOption: ChartConfiguration<'doughnut'>['options'] = {

@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Premium Wireless Headphones",
+      "price": 299,
+      "description": "High-fidelity audio with active noise cancellation and 30-hour battery life.",
+      "category": "electronics",
+      "image": "https://picsum.photos/id/26/400/400",
+      "rating": { "rate": 4.5, "count": 120 }
+    },
+    {
+      "id": "2",
+      "title": "Minimalist Leather Watch",
+      "price": 125,
+      "description": "Elegant timepiece with a genuine leather strap and water-resistant casing.",
+      "category": "accessories",
+      "image": "https://picsum.photos/id/175/400/400",
+      "rating": { "rate": 4.8, "count": 85 }
+    },
+    {
+      "id": "3",
+      "title": "Urban Cotton Hoodie",
+      "price": 55,
+      "description": "Soft, breathable cotton hoodie perfect for everyday casual wear.",
+      "category": "clothing",
+      "image": "https://picsum.photos/id/64/400/400",
+      "rating": { "rate": 4.2, "count": 210 }
+    },
+    {
+      "id": "4",
+      "title": "Smart Fitness Tracker",
+      "price": 89,
+      "description": "Track your steps, heart rate, and sleep patterns with ease.",
+      "category": "electronics",
+      "image": "https://picsum.photos/id/201/400/400",
+      "rating": { "rate": 4.0, "count": 340 }
+    },
+    {
+      "id": "5",
+      "title": "Classic Denim Jacket",
+      "price": 75,
+      "description": "Durable blue denim jacket that never goes out of style.",
+      "category": "clothing",
+      "image": "https://picsum.photos/id/338/400/400",
+      "rating": { "rate": 4.7, "count": 150 }
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "test@user.com",
+      "password": "password123",
+      "name": "Test User"
+    }
+  ],
+  "cart": []
+}

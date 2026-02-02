@@ -11,7 +11,7 @@ import { ToggleSidebarService } from 'src/app/common/services/toggle-sidebar';
   imports: [RouterOutlet,Header,Footer,Sidebar],
   templateUrl: './layout.html',
 })
-export class Layout {
+export class MainLayout {
   sidebarVisible = computed(() => this.toggleService.toggleSidebar());
   currentClasses: Record<string, boolean> = {};
   constructor(private toggleService: ToggleSidebarService){}

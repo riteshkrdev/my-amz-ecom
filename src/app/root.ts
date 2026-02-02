@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Layout } from './layout/layout/layout';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'shop-root',
-  imports: [Layout],
-  template: `<shop-layout/>`,
+  imports: [RouterOutlet],
+  template: `<router-outlet/>`,
 })
 export class Root {
   protected title = 'my-amz-ecom';
